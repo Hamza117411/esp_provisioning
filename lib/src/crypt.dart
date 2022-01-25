@@ -13,7 +13,7 @@ class Crypt {
       'iv': iv,
     });
   }
-  Future<Uint8List> crypt (Uint8List data) async {
+  Future<Future> crypt (Uint8List data) async {
     return _channel.invokeMethod('crypt', {
       'data': data,
     });
